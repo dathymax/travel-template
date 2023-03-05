@@ -6,7 +6,7 @@ import "../styles/header.css";
 const categories = [
     { name: "home", link: "#" },
     { name: "trending", link: "#trending" },
-    { name: "destination", link: "#destination" },
+    { name: "destinations", link: "#destinations" },
     { name: "testimonials", link: "#testimonials" },
 ]
 
@@ -53,7 +53,7 @@ const Header = () => {
                         categories.map(category => {
                             return (
                                 <li key={category.name}>
-                                    <a href={category.link} className="active">
+                                    <a href={category.link}>
                                         {category.name}
                                     </a>
                                 </li>
