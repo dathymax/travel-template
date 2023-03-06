@@ -2,6 +2,7 @@ import Banner from "@/components/Banner";
 import Destinations from "@/components/Destinations";
 import NearBy from "@/components/NearBy";
 import Search from "@/components/Search";
+import Subscribe from "@/components/Subscribe";
 import Testimonials from "@/components/Testimonials";
 import Trending from "@/components/Trending";
 
@@ -14,6 +15,7 @@ export default function Home() {
             <Destinations />
             <NearBy />
             <Testimonials />
+            <Subscribe />
         </main>
     )
 }

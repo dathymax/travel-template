@@ -8,8 +8,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination } from "swiper";
+import { TrendingTypes } from '@/types';
 
-const trends = [
+const trends: TrendingTypes[] = [
     {
         id: 1,
         name: "Vinpearl Nha Trang",
@@ -52,7 +53,7 @@ const trends = [
     },
 ]
 
-const Trending = () => {
+const Trending: React.FC = () => {
     return (
         <section id="trending">
             <div className="heading">

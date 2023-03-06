@@ -1,8 +1,9 @@
 import React from 'react'
 import "../styles/nearby.css"
 import Image from "next/image"
+import { ExploreTypes } from '@/types'
 
-const explores = [
+const explores: ExploreTypes[] = [
     {
         id: 1,
         name: "Ponagar Tower",
@@ -47,7 +48,7 @@ const explores = [
     },
 ]
 
-const NearBy = () => {
+const NearBy: React.FC = () => {
     return (
         <section id='explore'>
             <div className="heading">

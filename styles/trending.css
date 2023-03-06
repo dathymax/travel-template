@@ -113,3 +113,18 @@
 	background: var(--bg-primary);
 	color: var(--primary);
 }
+
+@media (max-width: 300px) {
+	#trending .card .price {
+		gap: 5px;
+	}
+
+	#trending .card .price p {
+		font-size: 0.7rem;
+	}
+
+	#trending .card .price a {
+		font-size: 0.6rem;
+		width: 80px;
+	}
+}

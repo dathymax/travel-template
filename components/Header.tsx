@@ -3,19 +3,28 @@
 import React, { useState, useEffect } from 'react'
 import "../styles/header.css";
 
-const categories = [
+const categories: { name: string, link: string }[] = [
     { name: "home", link: "#" },
     { name: "trending", link: "#trending" },
     { name: "destinations", link: "#destinations" },
     { name: "testimonials", link: "#testimonials" },
 ]
 
-const Header = () => {
-    const [visible, setVisible] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
+const Header: React.FC = () => {
+    const [visible, setVisible] = useState<boolean>(false);
+    const [showMenu, setShowMenu] = useState<boolean>(false);
+    const [id, setId] = useState<string | null>("home");
 
     const toggleVisible = () => {
         const scrolled = document.documentElement.scrollTop;
+        const sections = document.querySelectorAll("section");
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.scrollY >= sectionTop - 74) {
+                setId(section.getAttribute("id"));
+            }
+        })
 
         if (scrolled > 0) {
             setVisible(true)
@@ -25,6 +34,8 @@ const Header = () => {
     }
 
     useEffect(() => {
+        toggleVisible()
+
         window.addEventListener("scroll", toggleVisible)
 
         return () => {
@@ -53,7 +64,7 @@ const Header = () => {
                         categories.map(category => {
                             return (
                                 <li key={category.name}>
-                                    <a href={category.link}>
+                                    <a href={category.link} className={id === category.name ? "active" : ""}>
                                         {category.name}
                                     </a>
                                 </li>

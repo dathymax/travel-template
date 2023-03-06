@@ -1,7 +1,7 @@
 import React from 'react'
 import "../styles/search.css"
 
-const Search = () => {
+const Search: React.FC = () => {
     return (
         <section id="search">
             <strong>

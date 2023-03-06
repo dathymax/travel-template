@@ -1,8 +1,9 @@
+import { DestinationTypes } from '@/types'
 import Image from 'next/image'
 import React from 'react'
 import "../styles/destinations.css"
 
-const destinations = [
+const destinations: DestinationTypes[] = [
     {
         id: 1,
         name: "Vinpearl",
@@ -53,7 +54,7 @@ const destinations = [
     },
 ]
 
-const Destinations = () => {
+const Destinations: React.FC = () => {
     return (
         <section id='destinations'>
             <div className="heading">

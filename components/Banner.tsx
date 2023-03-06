@@ -9,13 +9,13 @@ import { Navigation, Pagination } from "swiper";
 import "../styles/banner.css"
 import Image from 'next/image';
 
-const images = [
+const images: string[] = [
     "https://raw.githubusercontent.com/devat-youtuber/travel-nextjs13beta-images/main/bn1.jpg",
     "https://raw.githubusercontent.com/devat-youtuber/travel-nextjs13beta-images/main/bn2.jpg",
     "https://raw.githubusercontent.com/devat-youtuber/travel-nextjs13beta-images/main/bn3.jpg",
 ]
 
-const Banner = () => {
+const Banner: React.FC = () => {
     return (
         <section id="home" className="banner">
             <Swiper
